@@ -9,21 +9,28 @@
 
 <body>
     <header>
-        <nav>
+        <nav class="topnav">
             <ul>
-                <a href="index.html"<li>Straw Poll</li></a>
-                <li>Logout</li>
+                <li><img src="logostrawpoll.png" alt="strawpoll logo"></li>
+                <li><a href="index.html">Straw Poll</a></li>
+                    <div id="navlinks">
+                        <li>Home</li>
+                        <li>Create Poll</li>
+                        <li>Schedule Meeting</li>
+                        <li>Discover</li>
+                     </div>
             </ul>
-        </nav> 
+        </nav>
     </header>
 
 
-    <section>
-            <h1>
+    <section class="topsection">
+            <h1 class="createpolltitle">
              Create Poll
             </h1>
 
 <form>
+    <article class="polltext">
     <label for="title">Title</label>
     <input type="text" id="title" name="title" value ="Type your question here...">
 
@@ -34,7 +41,9 @@
     <input type="text" id="answeroptions" name="answeroptions" value="Choose an answer...">
     <input type="text" id="answeroptions" name="answeroptions" value="Choose an answer...">
     <input type="text" id="answeroptions" name="answeroptions" value="Choose an answer...">
+    </article>
 
+    <article class="pollcheckbox">
     <label for="checkprivate">Private</label>
     <input type="checkbox" id="checkprivate" name="checkprivate" value="Private">
 
@@ -43,6 +52,7 @@
 
     <label for="checkip">Allow multiple votes from one IP</label>
     <input type="checkbox" id="checkip" name="checkip" value="Allow multiple votes from one ip">
+    </article>
 
 </form>
 
