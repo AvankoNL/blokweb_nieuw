@@ -1,95 +1,149 @@
+/*Veel titels en knoppen zijn in het midden gecentreerd. Daarom text-align center.*/
 body {
     font-family: nunito, sans-serif;
     background-color: #eff0eb;
     text-align: center;
 }
 
-header {
-    display: flex;
-    min-height: 3.25rem;
-    background-color: #ffffff;
-    width: 100vw;  
-    font-size: 32px;
-    color: #4a4a4a;
-    font-family: Open Sans, sans-serif;
+/*In een poging om de navigatie tot een hamburger menu te maken heb ik een deel onzichtbaar gemaakt.*/
+.topnav #navlinks {
+    display: none;
 }
 
+/*Styling van de navitatie in de header.*/
+header {
+    display: flex;
+    position: relative;
+    min-height: 1.75em;
+    background-color: #ffffff;
+    font-size: 2em;
+    font-family: Open Sans, sans-serif;
+    margin-bottom: 1em;
+}
+
+
 header ul {
-    list-style-type: none;
     margin: 0;
     padding: 0;
 }
 
+/*Plaatje van statistiek naast de titel geplaatst*/
 header li {
     display: inline;
 }
 
+
 header.ul {
     list-style-type: none;
 }
+
+/*Plaatje van laptop uitgelijnd*/
+header img {
+    display: inline-block;
+    max-width: 1em;
+    margin-top: 0.3em;
+    margin-left: 0.5em;
+}
+
+/*Ondertitel een class gegeven om apart te stylen van de rest*/
+.subtitle {
+    font-size: 1.2em;
+    padding: 0 0 10 0em;
+    text-align: center;
+    margin-top: 2em;
+    margin-left: 1em;
+}
+
+/*zelfde reden als ondertitel*/
+.typeofpoll {
+    font-size: 1.2em;
+    text-align: center;
+}
+
 h1 {
-    font-size: 32px;
-    padding-top: 1em;
+    font-size: 2.1em;
+    margin-bottom: -0.7em;
+    margin-top: 0.7em;
+    letter-spacing: -2px;
+    max-width: 70vw;
+    margin-left: 1.1em;
+    line-height: 1em;
+
+}
+
+/*variant op de normale h1 (meer afstand op de tekst eronder dan op pagina 1)*/
+.createpolltitle {
+    margin-bottom: 0.5em;
 }
 
 h2 {
-    font-size: 32px;
+    font-size: 2em;
 }
 
 h3 {
-    font-size: 25px;
+    font-size: 1.8em;
     padding-top: 1em;
-}
-
-h4 {
-    font-size: 20px;
-    color: #4a4a4a;
+    text-align: left;
+    padding-left: 0.6em;
 }
 
 p {
-    font-size: 16px;
+    font-size: 1.1em;
     color: #4a4a4a;
+    text-align: left;
+    padding-left: 1em;
+    max-width: 80vw;
 }
 
-img {
-    max-width: 90%;
+img { 
+    border-radius: 50%;
+    max-height: 10em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 section {
     background-color: #ffffff;
     width: 90vw;
-    max-width: 50em;
-    margin: auto;
-    margin-bottom: 4em;
-    padding-bottom: 4em;
-    margin-top: 3em;
+    max-width: 90vh;
     border-radius: 6px;
     box-shadow: 0 0.5em 1em -0.125em rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.02);
-    border-top: orange;
+    margin: auto;
+    padding-bottom: 1em;
+    margin-top: 2em;
+    
+}
 
+/*Oranje rand moest alleen maar te zien zijn bij de bovenste section. Daarom heb ik die in een class veranderd.*/
+.topsection {
+    border-top: 3px solid orange;
 }
 
 button {
     font-family: nunito, sans-serif;
     background-color: #3eb991;
-    padding: 15px 32px;
-    border-color: #3eb991;
+    padding: 0.8em 1.5em;
+    justify-content: center;
+    text-align: center;
+    border: none;
     color: #ffffff;
-    font-size: 20px;
+    font-size: 1.3em;
     text-decoration: none;
-    display: block;
-    margin: auto;
-    margin-bottom: 20px;
+    display: inline-block;
     border-radius: 4px;
     width: 80vw;
-    max-width: 15em;
+    max-width: 25em;
+    margin-bottom: 1.5em;
 }
 
+/*Als je met de muis over de button heen hovert verandert hij lichtelijk van kleur.*/
 button:hover {
-    background-color: rgb(81, 151, 99);
+    background-color: #3baf8a;
 
 }
 
+/*Streepje onder link verwijderd.*/
 a {
     text-decoration: none;
 }
@@ -101,34 +155,65 @@ form {
 
 label {
   font-size: 1.2em;
-  font-weight: bold;  
+  font-weight: bold;
+  margin-left: 0.7em;  
 }
 
 input {
+    font-size: 1em;
+    padding: 1em;
+}
+
+/*class gemaakt voor de tekst invulvelden*/
+.polltext input {
     display: block;
     margin: 1em;
-    padding: 1em 43.5em 0em 1em;
+    width: 80vw;
+    height: 3em;
+    border-radius: 5px;
+    border-color: lightgrey;
+    border: 2px solid lightgrey;
 }
 
-input:active {
-border-color: blue;
-
-}
-
-#title {
-
-}
-
+/*id gemaakt voor één speciaal invulveld dat groter moet zijn*/
 #description {
-
+    height:9em;
 }
 
-#answeroptions {
-
+/*class gemaakt voor de checkboxen*/
+.pollcheckbox input {
+    display: block;
+    margin: 1em;
+    height: 1em;
 }
 
+/*een specifieke knop grijs gemaakt*/
 #advancedoptions {
     background-color: lightgray;
     border-radius: 4px;
     border-color: lightgrey;
+}
+
+article ul {
+margin-left: 2em;
+}
+
+article ul li {
+    text-align: left;
+    font-size: 1.1em;
+}
+
+footer {
+    background-color: #343a40;
+    color: #adb5bd;
+}
+
+footer h3 {
+    margin-left: 0.5em;
+}
+
+footer ul {
+    list-style-type: none;
+    text-align: left;
+    padding-bottom: 1em;
 }
